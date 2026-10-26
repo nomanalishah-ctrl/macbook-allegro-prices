@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacBook parts price checker – Allegro PLN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">Allegro.pl · prices in PLN</div>
+    <h1>What does this MacBook part cost on Allegro?</h1>
+    <p class="lead">Enter the A-model number and the part name. See every seller’s price side by side, with delivery, so you know the real going rate in złoty.</p>
+  </header>
+
+  <section class="card" aria-label="Search">
+    <div class="row">
+      <div class="field grow1">
+        <label for="model">MacBook A-model</label>
+        <input id="model" class="mono" type="text" placeholder="e.g. A2338" value="A2338" autocomplete="off">
+      </div>
+      <div class="field grow2">
+        <label for="part">Part name</label>
+        <input id="part" type="text" placeholder="e.g. battery, display, keyboard" value="battery" autocomplete="off">
+      </div>
+      <a id="allegroLink" class="btn" href="#" target="_blank" rel="noopener">Compare on Allegro</a>
+      <button id="trackBtn" class="btn btn-secondary" type="button">Track this part</button>
+    </div>
+    <p id="trackStatus" class="status" role="status" aria-live="polite"></p>
+    <div class="chips-wrap">
+      <div class="chips-label">Common parts</div>
+      <div id="chips" class="chips"></div>
+    </div>
+  </section>
+
+  <section aria-live="polite">
+    <div class="results-head">
+      <h2>Offers for <span id="queryLabel" class="mono"></span></h2>
+      <div class="muted small" id="updated"></div>
+    </div>
+
+    <div class="stats">
+      <div class="card stat"><div class="muted small">Lowest total</div><div class="mono big" id="statMin">–</div></div>
+      <div class="card stat"><div class="muted small">Median</div><div class="mono big" id="statMed">–</div></div>
+      <div class="card stat"><div class="muted small">Highest total</div><div class="mono big" id="statMax">–</div></div>
+    </div>
+
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Seller</th><th>Condition</th>
+            <th class="num">Item price</th><th class="num">Delivery</th><th class="num">Total</th>
+            <th>Listing</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p id="note" class="muted small note"></p>
+  </section>
+
+  <section id="trackerSection" aria-labelledby="trackerTitle">
+    <div class="results-head">
+      <h2 id="trackerTitle" tabindex="-1">Tracked parts <span id="trackerCount" class="muted"></span></h2>
+      <div class="muted small">Saved in this browser only</div>
+    </div>
+    <p id="trackerEmpty" class="card empty-card">Nothing tracked yet. Enter an A-model and a part above, then choose “Track this part”. You can track as many parts as you like and remove them any time.</p>
+    <ul id="trackerList" class="track-list"></ul>
+    <p id="trackerNote" class="muted small note"></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

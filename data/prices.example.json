@@ -1,0 +1,14 @@
+{
+  "updated": "YYYY-MM-DD",
+  "offers": [
+    {
+      "model": "A2338",
+      "part": "battery",
+      "seller": "SellerName",
+      "condition": "New",
+      "price": 0.00,
+      "delivery": 0.00,
+      "url": "https://allegro.pl/oferta/REAL-OFFER-LINK"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "model": "A2338",
+      "part": "battery",
+      "d": "YYYY-MM-DD",
+      "min": 0.00,
+      "sum": 0.00,
+      "n": 0,
+      "low": { "seller": "SellerName", "condition": "New", "price": 0.00, "delivery": 0.00, "url": "https://allegro.pl/oferta/REAL-OFFER-LINK" }
+    }
+  ]
+}
